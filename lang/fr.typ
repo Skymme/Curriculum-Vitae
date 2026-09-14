@@ -9,6 +9,5 @@
   email: "E-mail",
   phone: "Téléphone",
   permis: "Permis",
-  birthdate: "Naissance",
-  permis: "Permis"
+  birthdate: "Naissance"
 )
