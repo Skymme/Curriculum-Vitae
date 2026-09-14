@@ -25,7 +25,7 @@
 
 #let badge(label, fill: color-accent) = box(
   fill: fill,
-  inset: (x: 8pt, y: 5pt),
+  inset: (x: 6.5pt, y: 5pt),
   radius: 2pt,
 )[#text(fill: color-white, size: 8pt)[#label]]
 
