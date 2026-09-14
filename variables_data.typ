@@ -26,7 +26,7 @@
   (name: "SQL", type: "data"),
   (name: "Analyse de données", type: "data"),
   (name: "Machine Learning", type: "data"),
-  (name: "Apache NiFi (ETL)", type: "data"),
+  (name: "Apache NiFi", type: "data"),
   (name: "Kubernetes", type: "data"),
 
   // Développement & Outils

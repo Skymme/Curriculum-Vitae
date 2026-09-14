@@ -33,3 +33,34 @@ If the template file has a different name, replace `resume.typ` with the actual 
 - Keep your personal variables in the top section of the Typst file for easy updates.
 - If the project includes multiple `.typ` files, the main file usually imports the others and is the one you compile.
 - After compiling, open the generated PDF to check formatting and content.
+
+## Variantes et compilation
+
+Quatre CV sont générés depuis les mêmes données :
+
+| Source | PDF | Usage |
+| --- | --- | --- |
+| `main.typ` | `pdf/CV-Jade-Vaillant-FullStack.pdf` | Full Stack, mise en page graphique |
+| `main_ats.typ` | `pdf/CV-Jade-Vaillant-FullStack-ATS.pdf` | Full Stack, lisible par les parseurs de CV |
+| `main_data.typ` | `pdf/CV-Jade-Vaillant-Data-Scientist.pdf` | Data Scientist, mise en page graphique |
+| `main_data_ats.typ` | `pdf/CV-Jade-Vaillant-Data-Scientist-ATS.pdf` | Data Scientist, lisible par les parseurs de CV |
+
+Les expériences, la formation et les langues vivent dans `variables.typ` :
+`variables_data.typ` les importe et ne redéfinit que l'accroche et l'ordre des
+compétences. Une expérience ajoutée une fois se propage aux quatre versions.
+
+Pour tout régénérer :
+
+```sh
+./build.sh
+```
+
+`build.sh` charge les polices depuis `fonts/` et refuse de produire un PDF si
+une police demandée est absente, plutôt que de laisser Typst y substituer
+silencieusement la sienne.
+
+## Polices
+
+`fonts/` contient Liberation Sans (SIL Open Font License 1.1, voir
+`fonts/LICENSE`), versionnée dans le dépôt pour que la compilation donne le
+même résultat sur n'importe quelle machine.
