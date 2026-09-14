@@ -27,15 +27,7 @@
     [
       #section-title(title-langs)
       #v(-2pt)
-      #for lang in languages [
-        #text(weight: "bold", size: 8pt)[#lang.name] #if lang.level != "" [
-          #h(2pt) #text(size: 8.5pt, fill: color-muted)[#lang.level]
-        ] #if "badge" in lang and lang.badge != "" [
-          #h(4pt)
-          #box(baseline: 20%)[#badge(lang.badge, fill: color-dev)]
-        ]
-        #v(0pt)
-      ]
+      #language-list(languages)
     ]
   )
 

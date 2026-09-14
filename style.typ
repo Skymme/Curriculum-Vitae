@@ -29,6 +29,24 @@
   radius: 2pt,
 )[#text(fill: color-white, size: 8pt)[#label]]
 
+// Liste des langues. Chaque ligne a la hauteur d'un badge et son contenu est
+// centré verticalement : l'écart entre les langues reste le même qu'une ligne
+// porte un badge ou non, et le badge s'aligne sur le texte.
+#let language-list(languages, gap: 1mm) = context {
+  let row-height = measure(badge("TOEIC")).height
+  stack(
+    spacing: gap,
+    ..languages.map(lang => grid(
+      columns: (auto, auto, auto),
+      rows: row-height,
+      align: left + horizon,
+      text(weight: "bold", size: 8pt)[#lang.name],
+      if lang.level != "" [#h(2pt)#text(size: 8.5pt, fill: color-muted)[#lang.level]] else [],
+      if "badge" in lang and lang.badge != "" [#h(4pt)#badge(lang.badge, fill: color-dev)] else [],
+    )),
+  )
+}
+
 #let timeline-section(body) = {
   grid(
     columns: (35mm, 6mm, 1fr),
