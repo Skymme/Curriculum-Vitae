@@ -2,12 +2,12 @@
 
 #let t = (
   experiences: "Expériences",
-  education: "Formation",
+  education: "Éducation",
   skills: "Compétences",
   languages: "Langues",
   contact: "Contact",
   email: "E-mail",
   phone: "Téléphone",
   permis: "Permis",
-  birthdate: "Naissance",
+  birthdate: "Naissance"
 )

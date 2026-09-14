@@ -1,4 +1,4 @@
-// main_data.typ — CV Data Scientist (compiler ce fichier)
+// main_data.typ — variante Data Scientist (compiler ce fichier)
 
 // 1. Imports des configurations, données et langues
 #import "style.typ": *
@@ -12,11 +12,9 @@
 #import "sections/skills_languages.typ": render-skills-languages
 
 // 3. CONFIGURATION GENERALE
-// Le bandeau d'en-tête va d'un bord à l'autre ; en bas, une marge de 10 mm
-// garde la légende hors de la zone que les imprimantes ne savent pas imprimer.
 #set page(
   paper: "a4",
-  margin: (top: 55mm, bottom: 10mm, left: 15mm, right: 15mm),
+  margin: (top: 56mm, bottom: 0mm, left: 15mm, right: 15mm),
   header: render-header(personal, t),
   header-ascent: 0%,
 )
@@ -27,7 +25,7 @@
   lang: "fr",
   fill: cvdarkgray
 )
-#v(3pt)
+#v(10pt)
 // 4. INJECTION DU CONTENU
 #render-experiences(experiences, t.experiences)
 

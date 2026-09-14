@@ -2,10 +2,15 @@
 #import "../style.typ": *
 
 #let render-education(education, title) = {
-  v(-2mm)
+  v(-4mm)
   line(length: 100%, stroke: 0.4pt + linegray)
   v(-1mm)
   section-title(title)
-  v(0.5mm)
-  timeline-section(education.map(timeline-item).flatten())
+  v(0pt)
+
+  timeline-section(
+    education.map(edu => {
+      timeline-item(edu.date, edu.poste, edu.entreprise, missions: edu.missions)
+    }).flatten()
+  )
 }

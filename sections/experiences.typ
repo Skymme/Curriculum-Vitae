@@ -4,6 +4,11 @@
 #let render-experiences(experiences, title) = {
   v(-2mm)
   section-title(title)
-  v(0.5mm)
-  timeline-section(experiences.map(timeline-item).flatten())
+  v(0pt)
+  
+  timeline-section(
+    experiences.map(exp => {
+      timeline-item(exp.date, exp.poste, exp.entreprise, missions: exp.missions)
+    }).flatten()
+  )
 }

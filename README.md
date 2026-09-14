@@ -49,11 +49,6 @@ Les expériences, la formation et les langues vivent dans `variables.typ` :
 `variables_data.typ` les importe et ne redéfinit que l'accroche et l'ordre des
 compétences. Une expérience ajoutée une fois se propage aux quatre versions.
 
-La mise en page graphique est dans `template.typ` (en-tête d'identité, parcours
-à gauche, compétences et langues dans une colonne latérale) ; la mise en page
-linéaire des versions ATS est dans `sections/ats.typ`. Les couleurs communes
-sont dans `style.typ`.
-
 Pour tout régénérer :
 
 ```sh
