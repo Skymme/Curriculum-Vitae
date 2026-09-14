@@ -1,2 +1,5 @@
 # JetBrains IDE
 .idea/
+
+# Réglages de Claude Code, propres à chaque poste
+.claude/
