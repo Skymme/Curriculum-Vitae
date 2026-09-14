@@ -110,3 +110,22 @@
     )
   )
 }
+
+// Colonnes Compétences / Langues. Les langues sont réparties sur la hauteur de
+// la colonne Compétences : la dernière langue s'aligne sur la dernière rangée
+// de badges au lieu de laisser un vide dessous. Les largeurs reprennent celles
+// de two-col-section (colonnes 1fr / 0.4fr, gouttière 8 mm, marge droite 8 mm
+// dans la colonne de gauche).
+#let skills-languages-columns(skills-body, langs-head, languages) = layout(size => {
+  let fr = (size.width - 8mm) / 1.4
+  let right = gap => [#langs-head#language-list(languages, gap: gap)]
+  let skills-height = measure(block(width: fr - 8mm, skills-body)).height
+  // La colonne Langues est mesurée telle qu'elle sera affichée, avec un écart
+  // nul : l'espacement entre le titre et la liste est ainsi compté.
+  let langs-height = measure(block(width: fr * 0.4, right(0pt))).height
+  let n = languages.len()
+  let gap = if n > 1 {
+    calc.max(1mm, (skills-height - langs-height) / (n - 1))
+  } else { 1mm }
+  two-col-section(skills-body, right(gap))
+})

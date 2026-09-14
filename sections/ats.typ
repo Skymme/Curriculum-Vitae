@@ -133,7 +133,7 @@
   v(0mm)
   line(length: 100%, stroke: 0.4pt + linegray)
 
-  two-col-section(
+  skills-languages-columns(
     [
       #section-title(title-skills)
       #v(-4pt)
@@ -151,8 +151,8 @@
     [
       #section-title(title-langs)
       #v(-2pt)
-      #language-list(languages)
-    ]
+    ],
+    languages,
   )
 
   line(length: 100%, stroke: 0.4pt + linegray)

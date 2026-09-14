@@ -6,7 +6,7 @@
   v(space-before)
   line(length: 100%, stroke: 0.4pt + linegray)
 
-  two-col-section(
+  skills-languages-columns(
     // Colonne gauche : Compétences
     [
       #section-title(title-skills)
@@ -23,12 +23,12 @@
         badge(skill.name, fill: bg-color)
       }).join(h(4pt))
     ],
-    // Colonne droite : Langues
+    // Colonne droite : titre des Langues (la liste est répartie par la brique)
     [
       #section-title(title-langs)
       #v(-2pt)
-      #language-list(languages)
-    ]
+    ],
+    languages,
   )
 
   line(length: 100%, stroke: 0.4pt + linegray)
