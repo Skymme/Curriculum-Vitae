@@ -27,7 +27,7 @@
     ]
   ),
   (
-    date: [Rennes, France \ Juin 2026 - Juil. 2026],
+    date: [Rennes, France \ Juin 2025 - Juil. 2025],
     poste: "Stage en analyse de données",
     entreprise: "Soprasteria",
     missions: [
