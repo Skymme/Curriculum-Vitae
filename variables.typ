@@ -9,9 +9,9 @@
   linkedin-title: "linkedin.com/in/vaillant-jade",
   github-url: "https://github.com/Skymme",
   github-title: "github.com/Skymme",
-  title: "CDI en développement WEB Full Stack, à Rennes",
+  title: "CDI en développement Web Full Stack",
   permis: "permis B",
-  summary: "Future ingénieure en informatique, je combine une solide expertise technique (Full Stack) et une forte sensibilité à l'innovation et à l'UX/UI. Passionnée par la création d'applications fluides et centrées sur l'utilisateur, j'aime transformer des problématiques complexes en solutions concrètes. Je recherche un premier poste de cadre à Rennes à partir d'octobre 2026.",
+  summary: "Diplômée ingénieure en informatique de l'INSA de Rennes, je combine une solide expertise technique (Full Stack) et une forte sensibilité à l'innovation et à l'UX/UI. Passionnée par la création d'applications fluides et centrées sur l'utilisateur, j'aime transformer des problématiques complexes en solutions concrètes. Je recherche un premier poste de cadre, disponible dès que possible.",
 )
 
 #let experiences = (
