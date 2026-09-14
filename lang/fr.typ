@@ -8,5 +8,6 @@
   contact: "Contact",
   email: "E-mail",
   phone: "Téléphone",
-  availability: "Disponibilité",
+  permis: "Permis",
+  birthdate: "Naissance",
 )

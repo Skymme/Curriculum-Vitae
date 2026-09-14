@@ -13,7 +13,8 @@
   github-title: "github.com/Skymme",
   website-url: "https://skymme.com",
   website-title: "skymme.com",
-  availability: "Dès que possible",
+  permis: "Permis B",
+  birthdate: "5 nov. 2002",
   title: "Développement Web Full Stack — CDI",
   summary: "Diplômée ingénieure en informatique de l’INSA de Rennes, je conçois des applications web full stack fluides et centrées sur l’utilisateur, en Angular et Spring Boot. J’aime transformer des problématiques complexes en solutions concrètes, et j’utilise les LLM au quotidien comme levier de productivité. Je recherche un premier poste de cadre, disponible dès que possible.",
 )

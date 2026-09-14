@@ -15,7 +15,8 @@
   github-title: "github.com/Skymme",
   website-url: "https://skymme.com",
   website-title: "skymme.com",
-  availability: "Dès que possible",
+  permis: "Permis B",
+  birthdate: "5 nov. 2002",
   title: "Data Scientist — CDI",
   summary: "Diplômée ingénieure en informatique de l’INSA de Rennes, spécialisée en Data et en Intelligence artificielle. J’ai conçu et entraîné des modèles de Machine Learning et de Deep Learning en Python (PyTorch, scikit-learn), et j’utilise les LLM au quotidien en comprenant leur fonctionnement. Je recherche un premier poste de Data Scientist tourné vers la prédiction, disponible dès que possible.",
 )

@@ -64,7 +64,7 @@
           #v(-5pt)
           #stack(
             place(dx: 0pt, dy: 0pt)[
-              #line(angle: 90deg, length: 62pt, stroke: 0.5pt + color-white)
+              #line(angle: 90deg, length: 110pt, stroke: 0.5pt + color-white)
             ],
             box(inset: (left: 15pt), width: 115pt)[
               #set text(fill: color-white, size: 8pt)
@@ -75,6 +75,12 @@
               #v(0pt)
               #text(weight: "bold")[#t.phone] \
               #personal.phone \
+              #v(0pt)
+              #text(weight: "bold")[#t.permis] \
+              #personal.permis \
+              #v(0pt)
+              #text(weight: "bold")[#t.birthdate] \
+              #personal.birthdate \
             ]
           )
         ],
