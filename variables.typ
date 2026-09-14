@@ -100,7 +100,7 @@
     ]
   ),
   (
-    date: [Colomiers, France \ - Déc 2020],
+    date: [Colomiers, France \ Juil. 2020],
     poste: "Baccalauréat scientifique, spécialité mathématiques",
     entreprise: "Lycée Victor Hugo",
     missions: none
