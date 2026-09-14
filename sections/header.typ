@@ -37,6 +37,9 @@
           #v(-10pt)
           #text(size: 10pt, fill: color-white, style: "italic")[#personal.title]
           #v(0pt)
+          // Pas de coupure dans un mot composé : « scikit-learn » coupé en fin
+          // de ligne est relu « scikitlearn » par un parseur de CV.
+          #show regex("\p{L}+(-\p{L}+)+"): box
           #text(size: 8pt, fill: color-white)[#personal.summary]
 
           #stack(

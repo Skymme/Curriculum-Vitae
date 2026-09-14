@@ -65,7 +65,7 @@
         #set list(marker: text(size: 5pt, fill: cvdarkgray)[•], body-indent: 3mm, spacing: 6pt)
         #text(size: 8pt)[#missions]
       ]
-      #v(3.4mm)
+      #v(2.8mm)
     ]
   ]
 )

@@ -14,7 +14,7 @@
 // 3. CONFIGURATION GENERALE
 #set page(
   paper: "a4",
-  margin: (top: 56mm, bottom: 0mm, left: 15mm, right: 15mm),
+  margin: (top: 56mm, bottom: 6mm, left: 15mm, right: 15mm),
   header: render-header(personal, t),
   header-ascent: 0%,
 )

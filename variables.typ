@@ -20,7 +20,7 @@
   (
     date: [Rennes, France \ Mars 2026 - Sept. 2026],
     poste: "Stage de développement fullstack",
-    entreprise: "Soprasteria",
+    entreprise: "Sopra Steria",
     missions: [
       - Conception et évolution de fonctionnalités d'une application d'envergure avec Angular 20 et Spring Boot.
       - Gestion de nouvelles tables via Liquibase et développement des couches d'accès aux données.
@@ -31,7 +31,7 @@
   (
     date: [Rennes, France \ Juin 2025 - Juil. 2025],
     poste: "Stage en analyse de données",
-    entreprise: "Soprasteria",
+    entreprise: "Sopra Steria",
     missions: [
       - Conception et optimisation de pipelines de données (flux ETL) avec Apache NiFi.
     ]
@@ -57,7 +57,7 @@
   (
     date: [Vélizy-Villacoublay, France \ Fév. 2022 - Mai 2022],
     poste: "Stage d'assistant chef de projet",
-    entreprise: "Robot For Site, filliale de Vinci",
+    entreprise: "Robot For Site, filiale de Vinci",
     missions: [
       - Analyse des données opérationnelles et des temps d'exécution pour la planification des tâches.
       - Identification et analyse des risques liés à l'intégration de robots sur les chantiers de construction.
