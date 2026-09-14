@@ -41,7 +41,9 @@
   )
 }
 
-#let timeline-item(date, poste, entreprise, missions: none) = (
+// `gap` : espace sous chaque entrée. Une variante qui a moins d'entrées à caser
+// sur la page peut l'élargir pour aérer.
+#let timeline-item(date, poste, entreprise, missions: none, gap: 2.8mm) = (
   align(top + left)[
     #box(width: 100%, inset: (right: 4mm))[
       #text(size: 8pt, fill: cvlightgray)[#date]
@@ -65,7 +67,7 @@
         #set list(marker: text(size: 5pt, fill: cvdarkgray)[•], body-indent: 3mm, spacing: 6pt)
         #text(size: 8pt)[#missions]
       ]
-      #v(2.8mm)
+      #v(gap)
     ]
   ]
 )

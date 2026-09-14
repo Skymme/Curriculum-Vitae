@@ -1,9 +1,14 @@
 // variables_data.typ
 // Variante « Data Scientist » du CV.
-// Les expériences, la formation et les langues sont partagées avec variables.typ :
-// seuls l'accroche et l'ordre des compétences changent.
+// La formation et les langues sont partagées avec variables.typ ; l'accroche,
+// l'ordre des compétences et la liste des expériences changent.
 
-#import "variables.typ": experiences, education, languages
+#import "variables.typ": education, languages
+#import "variables.typ": experiences as all-experiences
+
+// Les deux expériences les moins liées à la data ne figurent que sur le site :
+// le CV Data Scientist gagne de la place, rendue en espace blanc.
+#let experiences = all-experiences.filter(e => e.entreprise not in ("Hôpital du Croisic", "Airbus"))
 
 #let personal = (
   name: "Jade Vaillant",
