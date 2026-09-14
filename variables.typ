@@ -1,115 +1,128 @@
 // variables.typ
+// Données communes aux CV. `personal` et `skills` sont ceux du CV Full Stack ;
+// la variante Data Scientist (variables_data.typ) redéfinit ces deux-là et
+// réutilise le reste.
 
 #let personal = (
   name: "Jade Vaillant",
   email: "vaillant.jade@gmail.com",
   phone: "+33 7 81 80 56 45",
-  birthdate: "5 Nov, 2002",
   linkedin-url: "https://www.linkedin.com/in/vaillant-jade",
   linkedin-title: "linkedin.com/in/vaillant-jade",
   github-url: "https://github.com/Skymme",
   github-title: "github.com/Skymme",
   website-url: "https://skymme.com",
   website-title: "skymme.com",
-  title: "CDI en développement Web Full Stack",
-  permis: "permis B",
-  summary: "Diplômée ingénieure en informatique de l'INSA de Rennes, je combine une solide expertise technique (Full Stack) et une forte sensibilité à l'innovation et à l'UX/UI. Passionnée par la création d'applications fluides et centrées sur l'utilisateur, j'aime transformer des problématiques complexes en solutions concrètes. J'utilise les LLM au quotidien comme levier de productivité, en comprenant leur fonctionnement et leurs limites. Je recherche un premier poste de cadre, disponible dès que possible.",
+  title: "Développement Web Full Stack — CDI",
+  summary: "Diplômée ingénieure en informatique de l’INSA de Rennes, je conçois des applications web full stack fluides et centrées sur l’utilisateur, en Angular et Spring Boot. J’aime transformer des problématiques complexes en solutions concrètes, et j’utilise les LLM au quotidien comme levier de productivité. Je recherche un premier poste de cadre, disponible dès que possible.",
 )
 
+// `lieu` et `periode` sont séparés pour que chaque mise en page les place où
+// elle veut : à droite du titre (graphique) ou sur une même ligne (ATS).
 #let experiences = (
   (
-    date: [Rennes, France \ Mars 2026 - Sept. 2026],
-    poste: "Stage de développement fullstack",
-    entreprise: "Soprasteria",
+    poste: "Stage de développement Full Stack",
+    entreprise: "Sopra Steria",
+    lieu: "Rennes",
+    periode: "Mars 2026 – Sept. 2026",
     missions: [
-      - Conception et évolution de fonctionnalités d'une application d'envergure avec Angular 20 et Spring Boot.
-      - Gestion de nouvelles tables via Liquibase et développement des couches d'accès aux données.
-      - Intégration au sein d’une équipe Scrum pour assurer des livraisons itératives.
-      - Rédaction de tests automatisés et déploiement continu des solutions dans le respect des délais imposés.
+      - Fonctionnalités d’une application d’envergure en Angular 20 et Spring Boot.
+      - Nouvelles tables Liquibase et couches d’accès aux données.
+      - Travail en équipe Scrum, livraisons itératives.
+      - Tests automatisés et déploiement continu, dans le respect des délais.
     ]
   ),
   (
-    date: [Rennes, France \ Juin 2025 - Juil. 2025],
     poste: "Stage en analyse de données",
-    entreprise: "Soprasteria",
+    entreprise: "Sopra Steria",
+    lieu: "Rennes",
+    periode: "Juin 2025 – Juil. 2025",
     missions: [
       - Conception et optimisation de pipelines de données (flux ETL) avec Apache NiFi.
     ]
   ),
   (
-    date: [Rennes, France \ Juin 2024 - Sept. 2024],
-    poste: "Stage de développeur fullstack",
+    poste: "Stage de développement Full Stack",
     entreprise: "6TM",
+    lieu: "Rennes",
+    periode: "Juin 2024 – Sept. 2024",
     missions: [
       - Conception d’applications web et logicielles robustes en C\#, JavaScript et SQL.
-      - Optimisation du code et des requêtes pour améliorer significativement les temps de réponse et l'UX.
-      - Collaboration active à la revue de code.
+      - Optimisation du code et des requêtes : temps de réponse et UX améliorés.
+      - Participation active à la revue de code.
     ]
   ),
   (
-    date: [Rennes, France \ Juil. 2023 - Sept. 2023],
-    poste: "Stage de développeur frontend",
+    poste: "Stage de développement Frontend",
     entreprise: "Infotel",
+    lieu: "Rennes",
+    periode: "Juil. 2023 – Sept. 2023",
     missions: [
-      - Création d'interfaces utilisateurs fluides, réactives et multi-plateformes à l'aide de Flutter.
+      - Interfaces fluides, réactives et multiplateformes en Flutter.
     ]
   ),
   (
-    date: [Vélizy-Villacoublay, France \ Fév. 2022 - Mai 2022],
-    poste: "Stage d'assistant chef de projet",
-    entreprise: "Robot For Site, filliale de Vinci",
+    poste: "Stage d’assistant chef de projet",
+    entreprise: "Robot For Site, filiale de Vinci",
+    lieu: "Vélizy-Villacoublay",
+    periode: "Févr. 2022 – Mai 2022",
     missions: [
-      - Analyse des données opérationnelles et des temps d'exécution pour la planification des tâches.
-      - Identification et analyse des risques liés à l'intégration de robots sur les chantiers de construction.
+      - Analyse des données opérationnelles et des temps d’exécution des tâches.
+      - Analyse des risques liés à l’intégration de robots sur les chantiers.
     ]
   ),
   (
-    date: [Le Croisic \ Août 2021 - Sept. 2021],
     poste: "Assistant qualifié des services hospitaliers",
     entreprise: "Hôpital du Croisic",
+    lieu: "Le Croisic",
+    periode: "Août 2021 – Sept. 2021",
     missions: none
   ),
   (
-    date: [Colomiers \ Mai 2021 - Juin 2021],
     poste: "Stage technicien",
     entreprise: "Airbus",
+    lieu: "Colomiers",
+    periode: "Mai 2021 – Juin 2021",
     missions: [
-      - Création de supports et animation d'ateliers sur l'impression et la modélisation 3D.
+      - Supports et animation d’ateliers sur l’impression et la modélisation 3D.
     ]
   )
 )
 
 #let education = (
   (
-    date: [Rennes, France \ Jan 2022 - 2026],
-    poste: "Diplôme d'ingénieur, spécialité informatique",
+    poste: "Diplôme d’ingénieur, spécialité informatique",
     entreprise: "Institut National des Sciences Appliquées (INSA)",
+    lieu: "Rennes",
+    periode: "Janv. 2022 – 2026",
     missions: [
-      - Spécialisation Data et IA : projets de Machine Learning et de Deep Learning (PyTorch, scikit-learn).
-      - Enseignements en entrepreneuriat et participation aux « 48h de l'innovation ».
-      - Semestre d’échange académique (6 mois) au Rochester Institute of Technology (RIT), États-Unis.
-
+      - Spécialisation Data et IA : Machine et Deep Learning (PyTorch, scikit-learn).
+      - Semestre d’échange de 6 mois au Rochester Institute of Technology (États-Unis).
+      - Entrepreneuriat et «~48h de l’innovation~».
     ]
   ),
   (
-    date: [Toulouse, France \ 2020 - 2022],
-    poste: "Classe préparatoire intégrée - Parcours Ouvert",
+    poste: "Classe préparatoire intégrée – Parcours ouvert",
     entreprise: "Institut Catholique des Arts et Métiers (ICAM)",
+    lieu: "Toulouse",
+    periode: "2020 – 2022",
     missions: [
-      - Rôles actifs au sein du conseil des alumni, du bureau de recrutement et du club international.
+      - Conseil des alumni, bureau de recrutement et club international.
     ]
   ),
   (
-    date: [Colomiers, France \ - Déc 2020],
     poste: "Baccalauréat scientifique, spécialité mathématiques",
     entreprise: "Lycée Victor Hugo",
+    lieu: "Colomiers",
+    periode: "Déc. 2020",
     missions: none
   )
 )
 
+// L'ordre de première apparition des types fixe l'ordre des groupes affichés.
 #let skills = (
-  // Développement & Outils
-  (name: "Fullstack", type: "dev"),
+  // Développement & outils
+  (name: "Full Stack", type: "dev"),
   (name: "Angular", type: "dev"),
   (name: "Spring Boot", type: "dev"),
   (name: "Flutter", type: "dev"),
@@ -117,7 +130,7 @@
   (name: "Git", type: "dev"),
   (name: "Liquibase", type: "dev"),
 
-  // Data & Intelligence Artificielle
+  // Data & intelligence artificielle
   (name: "Python", type: "data"),
   (name: "R", type: "data"),
   (name: "Kubernetes", type: "data"),
@@ -125,15 +138,15 @@
   (name: "Analyse de données", type: "data"),
   (name: "LLM", type: "data"),
 
-  // Compétences Humaines
+  // Compétences humaines
   (name: "Méthodologie Agile", type: "human"),
-  (name: "Travail d'équipe", type: "human"),
+  (name: "Travail d’équipe", type: "human"),
   (name: "Gestion de projet", type: "human"),
   (name: "Rigueur", type: "human"),
 )
 
 #let languages = (
   (name: "Français", level: "Natif"),
-  (name: "Anglais",  level: "B2*", badge: "940 / 990 TOEIC"),
+  (name: "Anglais",  level: "B2", badge: "TOEIC 940/990"),
   (name: "Japonais", level: "A1"),
 )

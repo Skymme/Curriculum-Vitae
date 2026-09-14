@@ -2,12 +2,15 @@
 
 #let t = (
   experiences: "Expériences",
-  education: "Éducation",
+  education: "Formation",
   skills: "Compétences",
   languages: "Langues",
   contact: "Contact",
   email: "E-mail",
   phone: "Téléphone",
-  permis: "Permis",
-  birthdate: "Naissance"
+  skill-groups: (
+    data: "Data & IA",
+    dev: "Développement",
+    human: "Savoir-être",
+  ),
 )

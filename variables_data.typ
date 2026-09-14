@@ -9,20 +9,18 @@
   name: "Jade Vaillant",
   email: "vaillant.jade@gmail.com",
   phone: "+33 7 81 80 56 45",
-  birthdate: "5 Nov, 2002",
   linkedin-url: "https://www.linkedin.com/in/vaillant-jade",
   linkedin-title: "linkedin.com/in/vaillant-jade",
   github-url: "https://github.com/Skymme",
   github-title: "github.com/Skymme",
   website-url: "https://skymme.com",
   website-title: "skymme.com",
-  title: "CDI Data Scientist",
-  permis: "permis B",
-  summary: "Diplômée ingénieure en informatique de l'INSA de Rennes, spécialisée en Data et en Intelligence artificielle. J'ai conçu et entraîné des modèles de Machine Learning et de Deep Learning en Python (PyTorch, scikit-learn) et j'utilise les LLM au quotidien en comprenant leur fonctionnement et leurs limites. Ma double culture data et développement me permet de mener un projet de l'exploration à la mise en production. Je recherche un premier poste de Data Scientist, disponible dès que possible.",
+  title: "Data Scientist — CDI",
+  summary: "Diplômée ingénieure en informatique de l’INSA de Rennes, spécialisée en Data et en Intelligence artificielle. J’ai conçu et entraîné des modèles de Machine Learning et de Deep Learning en Python (PyTorch, scikit-learn), et j’utilise les LLM au quotidien en comprenant leur fonctionnement. Je recherche un premier poste de Data Scientist tourné vers la prédiction, disponible dès que possible.",
 )
 
 #let skills = (
-  // Data & Intelligence Artificielle
+  // Data & intelligence artificielle
   (name: "Python", type: "data"),
   (name: "R", type: "data"),
   (name: "SQL", type: "data"),
@@ -35,16 +33,16 @@
   (name: "Apache NiFi (ETL)", type: "data"),
   (name: "Kubernetes", type: "data"),
 
-  // Développement & Outils
-  (name: "Fullstack", type: "dev"),
+  // Développement & outils
+  (name: "Full Stack", type: "dev"),
   (name: "Spring Boot", type: "dev"),
   (name: "Angular", type: "dev"),
   (name: "C#", type: "dev"),
   (name: "Git", type: "dev"),
 
-  // Compétences Humaines
+  // Compétences humaines
   (name: "Méthodologie Agile", type: "human"),
-  (name: "Travail d'équipe", type: "human"),
+  (name: "Travail d’équipe", type: "human"),
   (name: "Gestion de projet", type: "human"),
   (name: "Rigueur", type: "human"),
 )

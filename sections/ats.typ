@@ -1,19 +1,33 @@
 // sections/ats.typ
-// Rendus « ATS-safe » : même charte graphique que le CV principal, mais
-// mise en page linéaire pour que les parseurs automatiques lisent le document
-// dans le bon ordre.
+// Rendus « ATS-safe » : même charte que le CV, mais mise en page linéaire pour
+// que les parseurs automatiques lisent le document dans le bon ordre.
 //
-// Deux différences avec les sections standard :
-//   1. L'en-tête rouge est rendu dans le CORPS du document et non dans le
-//      header de page (certains parseurs ignorent les marges).
-//   2. Les dates sont collées sous l'intitulé du poste au lieu d'occuper une
-//      colonne séparée (une frise en deux colonnes est lue comme deux blocs
-//      distincts par un parseur géométrique).
+// Deux différences avec la mise en page graphique :
+//   1. L'en-tête est rendu dans le CORPS du document et non dans une zone
+//      que certains parseurs ignorent.
+//   2. Chaque entrée est une suite linéaire (poste, entreprise, lieu · période,
+//      missions) : pas de colonnes qu'un parseur géométrique séparerait.
 
 #import "../style.typ": *
-#import "header.typ": tag-social
 
 // ── EN-TÊTE (dans le flux du document) ───────────────────────────
+#let tag-social(logo-path, label, link-url) = link(link-url)[
+  #box(
+    fill: color-white,
+    inset: (x: 6pt, y: 4pt),
+    radius: 3pt,
+    baseline: 20%,
+  )[
+    #grid(
+      columns: (auto, auto),
+      column-gutter: 4pt,
+      align: horizon,
+      image(logo-path, height: 8pt),
+      text(fill: color-accent, size: 8pt, weight: "medium")[#label]
+    )
+  ]
+]
+
 #let render-header-ats(personal, t) = {
   pad(x: -15mm)[
     #block(
@@ -32,6 +46,9 @@
           #v(-10pt)
           #text(size: 10pt, fill: color-white, style: "italic")[#personal.title]
           #v(0pt)
+          // Pas de coupure dans un mot composé : « scikit-learn » coupé en fin
+          // de ligne est relu « scikitlearn » par un parseur de CV.
+          #show regex("\p{L}+(-\p{L}+)+"): box
           #text(size: 8pt, fill: color-white)[#personal.summary]
 
           #stack(
@@ -47,7 +64,7 @@
           #v(-5pt)
           #stack(
             place(dx: 0pt, dy: 0pt)[
-              #line(angle: 90deg, length: 110pt, stroke: 0.5pt + color-white)
+              #line(angle: 90deg, length: 62pt, stroke: 0.5pt + color-white)
             ],
             box(inset: (left: 15pt), width: 115pt)[
               #set text(fill: color-white, size: 8pt)
@@ -58,12 +75,6 @@
               #v(0pt)
               #text(weight: "bold")[#t.phone] \
               #personal.phone \
-              #v(0pt)
-              #text(weight: "bold")[#t.permis] \
-              #personal.permis \
-              #v(0pt)
-              #text(weight: "bold")[#t.birthdate] \
-              #personal.birthdate \
             ]
           )
         ],
@@ -72,32 +83,19 @@
   ]
 }
 
-// ── ENTRÉE LINÉAIRE (poste + entreprise, puis lieu · période, puis missions)
-// `date` vaut `[Lieu \ Période]` dans variables.typ. On remplace le saut de
-// ligne par un séparateur pour tout tenir sur une ligne : c'est ce qui permet
-// à la version ATS de rester sur une seule page.
-#let inline-date(d) = {
-  if type(d) == content and d.has("children") {
-    d.children.map(c => if c.func() == linebreak { [ · ] } else { c }).join()
-  } else {
-    d
-  }
-}
-
-#let entry-ats(date, poste, entreprise, missions: none) = {
+// ── ENTRÉE LINÉAIRE ──────────────────────────────────────────────
+#let entry-ats(e) = {
   block(width: 100%, breakable: false, below: 2.2mm)[
-    #text(weight: "bold", size: 8.5pt)[#poste]
-    #if entreprise != "-" and entreprise != "" [
-      #text(size: 8.5pt, fill: cvlightgray)[ — ]
-      #text(weight: "bold", fill: cvaccent, size: 8.5pt)[#entreprise]
-    ]
+    #text(weight: "bold", size: 8.5pt)[#e.poste]
+    #text(size: 8.5pt, fill: cvlightgray)[ — ]
+    #text(weight: "bold", fill: cvaccent, size: 8.5pt)[#e.entreprise]
     #linebreak()
     #v(-2.9mm)
-    #text(size: 7.5pt, fill: cvlightgray)[#inline-date(date)]
-    #if missions != none [
+    #text(size: 7.5pt, fill: cvlightgray)[#e.lieu · #e.periode]
+    #if e.missions != none [
       #v(-1mm)
       #set list(marker: text(size: 5pt, fill: cvdarkgray)[•], body-indent: 3mm, spacing: 4pt)
-      #text(size: 8pt)[#missions]
+      #text(size: 8pt)[#e.missions]
     ]
   ]
 }
@@ -106,9 +104,7 @@
   v(-2mm)
   section-title(title)
   v(1mm)
-  for exp in experiences {
-    entry-ats(exp.date, exp.poste, exp.entreprise, missions: exp.missions)
-  }
+  for e in experiences { entry-ats(e) }
 }
 
 #let render-education-ats(education, title) = {
@@ -117,15 +113,12 @@
   v(-1mm)
   section-title(title)
   v(1mm)
-  for edu in education {
-    entry-ats(edu.date, edu.poste, edu.entreprise, missions: edu.missions)
-  }
+  for e in education { entry-ats(e) }
 }
 
 // ── COMPÉTENCES & LANGUES ────────────────────────────────────────
-// Conservé en deux colonnes comme le CV d'origine : le test d'extraction
-// montre que tous les libellés survivent intacts dans les deux modes de
-// lecture, et cela économise la place gagnée sur les expériences.
+// En deux colonnes : le test d'extraction montre que tous les libellés
+// survivent intacts dans les deux modes de lecture.
 #let render-skills-languages-ats(skills, languages, title-skills, title-langs) = {
   v(0mm)
   line(length: 100%, stroke: 0.4pt + linegray)
@@ -164,11 +157,11 @@
   v(-2mm)
   align(left)[
     #text(size: 7.5pt, fill: color-muted)[
-      #box(baseline: 10%, circle(radius: 2.5pt, fill: color-dev)) #h(2pt) Développement & Outils
+      #box(baseline: 10%, circle(radius: 2.5pt, fill: color-dev)) #h(2pt) Développement & outils
       #h(12pt)
       #box(baseline: 10%, circle(radius: 2.5pt, fill: color-data)) #h(2pt) Data & IA
       #h(12pt)
-      #box(baseline: 10%, circle(radius: 2.5pt, fill: color-human)) #h(2pt) Compétences Humaines
+      #box(baseline: 10%, circle(radius: 2.5pt, fill: color-human)) #h(2pt) Compétences humaines
     ]
   ]
 }
