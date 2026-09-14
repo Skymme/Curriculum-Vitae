@@ -8,9 +8,5 @@
   contact: "Contact",
   email: "E-mail",
   phone: "Téléphone",
-  skill-groups: (
-    data: "Data & IA",
-    dev: "Développement",
-    human: "Savoir-être",
-  ),
+  availability: "Disponibilité",
 )

@@ -13,12 +13,13 @@
   github-title: "github.com/Skymme",
   website-url: "https://skymme.com",
   website-title: "skymme.com",
+  availability: "Dès que possible",
   title: "Développement Web Full Stack — CDI",
   summary: "Diplômée ingénieure en informatique de l’INSA de Rennes, je conçois des applications web full stack fluides et centrées sur l’utilisateur, en Angular et Spring Boot. J’aime transformer des problématiques complexes en solutions concrètes, et j’utilise les LLM au quotidien comme levier de productivité. Je recherche un premier poste de cadre, disponible dès que possible.",
 )
 
 // `lieu` et `periode` sont séparés pour que chaque mise en page les place où
-// elle veut : à droite du titre (graphique) ou sur une même ligne (ATS).
+// elle veut : empilés dans la frise (graphique) ou sur une même ligne (ATS).
 #let experiences = (
   (
     poste: "Stage de développement Full Stack",
@@ -119,7 +120,6 @@
   )
 )
 
-// L'ordre de première apparition des types fixe l'ordre des groupes affichés.
 #let skills = (
   // Développement & outils
   (name: "Full Stack", type: "dev"),
