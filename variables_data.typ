@@ -14,9 +14,11 @@
   linkedin-title: "linkedin.com/in/vaillant-jade",
   github-url: "https://github.com/Skymme",
   github-title: "github.com/Skymme",
+  website-url: "https://skymme.com",
+  website-title: "skymme.com",
   title: "CDI Data Scientist",
   permis: "permis B",
-  summary: "Diplômée ingénieure en informatique de l'INSA de Rennes, spécialisée en Data et en Intelligence artificielle, je transforme des données brutes en décisions exploitables : pipelines ETL, analyse statistique et modélisation. Ma double culture data et développement logiciel me permet de mener un projet de l'exploration jusqu'à la mise en production. Je recherche un premier poste de Data Scientist, disponible dès que possible.",
+  summary: "Diplômée ingénieure en informatique de l'INSA de Rennes, spécialisée en Data et en Intelligence artificielle. J'ai conçu et entraîné des modèles de Machine Learning et de Deep Learning en Python (PyTorch, scikit-learn) et j'utilise les LLM au quotidien en comprenant leur fonctionnement et leurs limites. Ma double culture data et développement me permet de mener un projet de l'exploration à la mise en production. Je recherche un premier poste de Data Scientist, disponible dès que possible.",
 )
 
 #let skills = (
@@ -26,6 +28,10 @@
   (name: "SQL", type: "data"),
   (name: "Analyse de données", type: "data"),
   (name: "Machine Learning", type: "data"),
+  (name: "Deep Learning", type: "data"),
+  (name: "PyTorch", type: "data"),
+  (name: "scikit-learn", type: "data"),
+  (name: "LLM", type: "data"),
   (name: "Apache NiFi (ETL)", type: "data"),
   (name: "Kubernetes", type: "data"),
 

@@ -9,9 +9,11 @@
   linkedin-title: "linkedin.com/in/vaillant-jade",
   github-url: "https://github.com/Skymme",
   github-title: "github.com/Skymme",
+  website-url: "https://skymme.com",
+  website-title: "skymme.com",
   title: "CDI en développement Web Full Stack",
   permis: "permis B",
-  summary: "Diplômée ingénieure en informatique de l'INSA de Rennes, je combine une solide expertise technique (Full Stack) et une forte sensibilité à l'innovation et à l'UX/UI. Passionnée par la création d'applications fluides et centrées sur l'utilisateur, j'aime transformer des problématiques complexes en solutions concrètes. Je recherche un premier poste de cadre, disponible dès que possible.",
+  summary: "Diplômée ingénieure en informatique de l'INSA de Rennes, je combine une solide expertise technique (Full Stack) et une forte sensibilité à l'innovation et à l'UX/UI. Passionnée par la création d'applications fluides et centrées sur l'utilisateur, j'aime transformer des problématiques complexes en solutions concrètes. J'utilise les LLM au quotidien comme levier de productivité, en comprenant leur fonctionnement et leurs limites. Je recherche un premier poste de cadre, disponible dès que possible.",
 )
 
 #let experiences = (
@@ -83,7 +85,7 @@
     poste: "Diplôme d'ingénieur, spécialité informatique",
     entreprise: "Institut National des Sciences Appliquées (INSA)",
     missions: [
-      - Spécialisations supplémentaires en Data et en Intelligence artificielle (IA).
+      - Spécialisation Data et IA : projets de Machine Learning et de Deep Learning (PyTorch, scikit-learn).
       - Enseignements en entrepreneuriat et participation aux « 48h de l'innovation ».
       - Semestre d’échange académique (6 mois) au Rochester Institute of Technology (RIT), États-Unis.
 
@@ -121,6 +123,7 @@
   (name: "Kubernetes", type: "data"),
   (name: "SQL", type: "data"),
   (name: "Analyse de données", type: "data"),
+  (name: "LLM", type: "data"),
 
   // Compétences Humaines
   (name: "Méthodologie Agile", type: "human"),

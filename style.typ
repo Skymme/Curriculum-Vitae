@@ -1,18 +1,18 @@
 // style.typ
 
 // ── COULEURS ────────────────────────────────────────────────────
-#let cvred        = rgb("#c4021a")
+#let cvaccent     = rgb("#1f4e79")
 #let cvdarkgray   = rgb("#333333")
 #let cvlightgray  = rgb("#6e6e6e")
 #let linegray     = rgb("#dcdcdc")
-#let color-accent = rgb("#c0202a")
+#let color-accent = rgb("#1f4e79")
 #let color-bg     = rgb("#f2f2f2")
 #let color-white  = rgb("#ffffff")
 #let color-text   = rgb("#1a1a1a")
 #let color-muted  = rgb("#666666")
-#let color-human  = rgb("#2a6f97")
+#let color-human  = rgb("#7a4e8c")
 #let color-data   = rgb("#2d6a4f")
-#let color-human  = rgb("#2a6f97")
+#let color-human  = rgb("#7a4e8c")
 
 #let color-dev     = color-accent
 #let color-divider = linegray
@@ -49,7 +49,7 @@
   ],
   align(top + left)[
     #place(dx: -3pt, dy: 1.5mm)[
-      #circle(radius: 3pt, fill: cvred)
+      #circle(radius: 3pt, fill: cvaccent)
     ]
   ],
   align(top + left)[
@@ -57,7 +57,7 @@
       #text(weight: "bold", size: 8pt)[#poste] \
       #if entreprise != "-" and entreprise != "" [
         #v(-2mm)
-        #text(weight: "bold", fill: cvred, size: 8pt)[#entreprise]
+        #text(weight: "bold", fill: cvaccent, size: 8pt)[#entreprise]
         #v(-1mm)
       ]
       #if missions != none [

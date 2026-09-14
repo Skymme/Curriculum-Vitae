@@ -39,6 +39,7 @@
             spacing: 6pt,
             tag-social("../icons/github.svg", personal.github-title, personal.github-url),
             tag-social("../icons/linkedin.svg", personal.linkedin-title, personal.linkedin-url),
+            tag-social("../icons/globe.svg", personal.website-title, personal.website-url),
           )
         ],
 
@@ -88,7 +89,7 @@
     #text(weight: "bold", size: 8.5pt)[#poste]
     #if entreprise != "-" and entreprise != "" [
       #text(size: 8.5pt, fill: cvlightgray)[ — ]
-      #text(weight: "bold", fill: cvred, size: 8.5pt)[#entreprise]
+      #text(weight: "bold", fill: cvaccent, size: 8.5pt)[#entreprise]
     ]
     #linebreak()
     #v(-2.9mm)
